@@ -1,0 +1,13 @@
+version: '3.4'
+
+services:
+
+  payment_ms:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: crowstream2021/crowstream_interface
+    container_name: crowstream_interface_dev
+    env_file: .env
+    ports:
+      - '8080:8080'
